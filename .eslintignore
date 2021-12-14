@@ -1,0 +1,4 @@
+!src/.vuepress
+public
+node_modules
+dist

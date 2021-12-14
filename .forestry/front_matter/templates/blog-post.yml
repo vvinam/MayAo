@@ -1,0 +1,250 @@
+---
+label: Blog post + card
+hide_body: false
+display_field: title
+fields:
+- type: text
+  name: title
+  label: Title
+  description: Appears as the "headline" of the post itself, as well as the title
+    of post's card. Max length 3 lines (approx 60 characters) before truncating.
+  config:
+    min: 
+    max: 
+    required: true
+- type: textarea
+  name: description
+  label: Description
+  config:
+    max: 110
+  description: Appears as subtitle on post's card. Max length 3 lines (approx 110
+    characters) before truncating.
+- type: text
+  name: author
+  label: Author
+  description: 'Separate multiple authors with commas: <em>Cayce Pollard, Hobbs Baranov,
+    Prince</em>'
+- type: datetime
+  name: date
+  label: Publish Date
+  description: '"Published on" date. To schedule this post for future publishing,
+    simply set the date to the future.<br><br><strong><em>WARNING</em></strong><em>:
+    Data is saved in the </em><a href="https://github.com/ipfs/ipfs-blog" title=""
+    target="_blank"><em>ipfs/ipfs-blog</em></a><em> public GitHub repo as soon as
+    you hit the save button. So any sensitive information will also be publicly available
+    on GitHub, but hidden from the website blog.ipfs.io.</em>'
+  config:
+    required: true
+    date_format: YYYY/MM/DD
+    export_format: YYYY-MM-DD
+    display_utc: false
+- type: text
+  name: permalink
+  label: Permalink
+  description: 'URL for this post. Must start and end with slashes. <br>For blog posts,
+    include the date: <em>/2022-09-23-descriptive-title/</em><br>For weekly newsletters,
+    use the edition number: <em>/weekly-123/</em>'
+  config:
+    required: true
+- type: text
+  name: translationKey
+  label: Translation key
+  description: 'If this post will be translated, give it a unique name so it can be
+    paired with its translated equivalent. Could be the same as the permalink, just
+    without the slashes: <em>2022-09-23-descriptive-title</em>'
+- type: file
+  name: header_image
+  label: Card & header image
+  description: Appears both on the post's card and as the header image on the post
+    page. <br><strong>Must be twice as wide as it is tall (2:1 aspect ratio) and at
+    least 400px tall.</strong> <strong>Name the image file something that can be easily
+    searched for in the media directory later (consider adding a date).</strong><br>Need
+    help? <a href="https://blog.ipfs.io/image-crop/" title="Use this crop/scale tool"
+    target="_blank">Use this crop/scale tool</a> to save a revised image to your local
+    machine, then upload here.
+- name: tags
+  type: list
+  config:
+    use_select: true
+    min: 
+    max: 
+    source:
+      type: simple
+      section: ''
+      file: 
+      path: ''
+    options:
+    - AEgir
+    - API
+    - async/await
+    - Bitswap
+    - blockstore
+    - bootstrap nodes
+    - breaking change
+    - browsers
+    - case study
+    - CDN
+    - censorship
+    - CID
+    - CLI tools
+    - collaborative cluster
+    - community
+    - conferences
+    - containerization
+    - content routing
+    - CRDTs
+    - DAG
+    - datastore
+    - demo
+    - DHT
+    - Docker
+    - docs
+    - encryption
+    - Ethereum
+    - Filecoin
+    - gaming
+    - gateways
+    - go-ipfs
+    - Gossipsub
+    - hackathon
+    - identity
+    - infrastructure
+    - interoperability
+    - interview
+    - IPFS Camp
+    - IPFS Cluster
+    - IPFS Companion
+    - IPFS Desktop
+    - IPFS Web UI
+    - IPLD
+    - js-ipfs
+    - Kademlia
+    - libp2p
+    - MFS
+    - mobile
+    - NFTs
+    - official meetup
+    - opera
+    - package managers
+    - pinning
+    - project planning
+    - ProtoSchool
+    - pubsub
+    - QUIC
+    - recap
+    - release notes
+    - research
+    - Rust
+    - SECIO
+    - security
+    - static publishing
+    - streaming
+    - Testground
+    - tutorial
+    - weekly
+    - whitepaper
+    - Windows
+  label: Tags
+  description: <strong>Select all tags that apply.</strong> If you <em>really</em>
+    need to add a new tag, please <a href="https://github.com/ipfs/ipfs-blog/issues"
+    target="_blank">file an issue</a> with the details.
+pages:
+- src/_blog/2021-05-31-distributed-wikipedia-mirror-update.md
+- src/_blog/a-brave-new-wallet-the-future-of-the-browser-wallet.md
+- src/_blog/a-guide-to-ipfs-connectivity-in-web-browsers.md
+- src/_blog/about-500-000-in-prizes-and-grants-for-asia-hackathon-season-2021.md
+- src/_blog/announcing-js-ipfs-0.53.0.md
+- src/_blog/announcing-the-jupiter-hackathon.md
+- src/_blog/audius-uses-ipfs-for-content-streaming-storage-to-empower-artists-creators-worldwide.md
+- src/_blog/aug-20-ipfs.io-gateway-outage-resolution-next-steps.md
+- src/_blog/browsers-3000-winners-18k-in-prizes-goes-to-security-cryptography-and-gaming-applications.md
+- src/_blog/building-web3-pinata.md
+- src/_blog/ceramic-launches-mainnet-using-ipfs-and-filecoin-for-decentralized-storage.md
+- src/_blog/community-highlight-esteroids.md
+- src/_blog/congrats-gitcoin-grants-round-9-winners.md
+- src/_blog/decentralized-games-at-gamedev.js-jam-2021.md
+- src/_blog/decentralizing-infrastructure-during-scaling-ethereum.md
+- src/_blog/decentralizing-the-internet-s-root.md
+- src/_blog/developing-consumer-decentralized-applications-with-slate.md
+- src/_blog/go-ipfs-0.8.0-and-remote-pinning-is-here.md
+- src/_blog/go-ipfs-v0.9.0-has-been-released.md
+- src/_blog/hey-ethdenver-hack-on-ipfs-with-these-bounties.md
+- src/_blog/how-to-store-and-maintain-nft-metadata.md
+- src/_blog/how-we-put-ipfs-in-brave.md
+- src/_blog/interplanetary-timelessness-ipfs-filecoin-for-the-nft-long-haul.md
+- src/_blog/introducing-js-ipfs-0.54.0.md
+- src/_blog/introducing-the-browsers-3000-hackathon.md
+- src/_blog/ion-a-path-to-decentralized-identity.md
+- src/_blog/ipfs-at-ethdenver-2021.md
+- src/_blog/ipfs-browser-connectivity-walkthrough.md
+- src/_blog/ipfs-filecoin-and-content-persistence.md
+- src/_blog/ipfs-filecoin-chainlink-hackathon-winners.md
+- src/_blog/ipfs-in-brave-native-access-to-the-distributed-web.md
+- src/_blog/ipfs-in-opera-touch-on-ios.md
+- src/_blog/join-us-at-ethdenver-2021-year-of-the-spork-marmot.md
+- src/_blog/js-ipfs-0.55.0-greatly-improves-type-definitions.md
+- src/_blog/js-ipfs-0.56.0-upgrades-to-new-multiformats-stack-and-adds.car-import-export.md
+- src/_blog/just-released-ipfs-cluster-0.14.0.md
+- src/_blog/libp2p-comes-to-protoschool.md
+- src/_blog/meet-the-new-ipfs-blog-news.md
+- src/_blog/minting-fresh-nfts-with-ipfs.md
+- src/_blog/nebulus-the-virtual-ipfs-network.md
+- src/_blog/opensea-decentralizes-and-persists-nft-storage-with-ipfs-and-filecoin.md
+- src/_blog/own-your-identity-with-ion.md
+- src/_blog/recapping-nfthack-with-ipfs-and-protocol-labs.md
+- src/_blog/skiff-integrates-ipfs-to-bring-decentralization-and-encryption-to-consumers.md
+- src/_blog/spring-university-hackathons-roundup.md
+- src/_blog/storing-nfts-on-ipfs.md
+- src/_blog/understanding-the-three-fundamental-principles-of-how-ipfs-works.md
+- src/_blog/using-ipfs-to-help-with-scaling-ethereum.md
+- src/_blog/valist-relies-on-ipfs-and-filecoin-to-move-software-from-web2-to-web3.md
+- src/_blog/web3-weekend-in-review.md
+- src/_blog/welcome-to-ipfs-weekly-119.md
+- src/_blog/welcome-to-ipfs-weekly-120.md
+- src/_blog/welcome-to-ipfs-weekly-121.md
+- src/_blog/welcome-to-ipfs-weekly-122.md
+- src/_blog/welcome-to-ipfs-weekly-123.md
+- src/_blog/welcome-to-ipfs-weekly-124.md
+- src/_blog/welcome-to-ipfs-weekly-125.md
+- src/_blog/welcome-to-ipfs-weekly-126.md
+- src/_blog/welcome-to-ipfs-weekly-127.md
+- src/_blog/welcome-to-ipfs-weekly-128.md
+- src/_blog/welcome-to-ipfs-weekly-129.md
+- src/_blog/welcome-to-ipfs-weekly-130.md
+- src/_blog/welcome-to-ipfs-weekly-131.md
+- src/_blog/welcome-to-ipfs-weekly-132.md
+- src/_blog/welcome-to-ipfs-weekly-133.md
+- src/_blog/welcome-to-ipfs-weekly-134.md
+- src/_blog/welcome-to-ipfs-weekly-135.md
+- src/_blog/welcome-to-ipfs-weekly-136.md
+- src/_blog/welcome-to-ipfs-weekly-137.md
+- src/_blog/welcome-to-ipfs-weekly-138.md
+- src/_blog/welcome-to-ipfs-weekly-139.md
+- src/_blog/welcome-to-ipfs-weekly-140.md
+- src/_blog/welcome-to-ipfs-weekly-141.md
+- src/_blog/welcome-to-ipfs-weekly-142.md
+- src/_blog/welcome-to-ipfs-weekly-143.md
+- src/_blog/welcome-to-ipfs-weekly-144.md
+- src/_blog/welcome-to-ipfs-weekly-145.md
+- src/_blog/welcome-to-ipfs-weekly-146.md
+- src/_blog/welcome-to-ipfs-weekly-147.md
+- src/_blog/welcome-to-ipfs-weekly-148.md
+- src/_blog/welcome-to-ipfs-weekly-149-huge-news-out-of-audius-249k-distributed-to-dorahacks-winners-a-preview-of-sxsw-2021-and-more.md
+- src/_blog/welcome-to-ipfs-weekly-150-celebrating-the-150th-ipfs-newsletter-with-another-set-of-nfts-stored-on-ipfs-and-more-in-the-ipfs-ecosystem.md
+- src/_blog/welcome-to-ipfs-weekly-151.md
+- src/_blog/welcome-to-ipfs-weekly-152.md
+- src/_blog/welcome-to-ipfs-weekly-153.md
+- src/_blog/welcome-to-ipfs-weekly-154.md
+- src/_blog/welcome-to-ipfs-weekly-155.md
+- src/_blog/welcome-to-ipfs-weekly-156.md
+- src/_blog/welcome-to-ipfs-weekly-157.md
+- src/_blog/welcome-to-ipfs-weekly-158.md
+- src/_blog/welcome-to-ipfs-weekly-159.md
+- src/_blog/welcome-to-ipfs-weekly-160.md
+- src/_blog/welcome-to-ipfs-weekly-161.md
+- src/_blog/welcome-to-ipfs-weekly-162.md
+- src/_blog/welcome-to-ipfs-weekly-163.md
+- src/_blog/welcome-to-ipfs-weekly-164.md
+- src/_blog/welcome-to-ipfs-weekly-165.md
+- src/_blog/what-is-ipld.md
+- src/_blog_zh/ipfs-136.md
